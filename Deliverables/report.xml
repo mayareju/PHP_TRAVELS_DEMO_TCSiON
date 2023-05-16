@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="1,394.106" tests="47" skipped="0" failures="3" errors="0">
+<testcase classname="Customer FrontEnd Link Functionality" name="Customer Test the Link functionality" time="42.587">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And User enters Email as "user@phptravels.com" and password as "demouser"...passed
+And click Login button......................................................passed
+Then Page title should be "Dashboard - PHPTRAVELS"..........................passed
+When user click on My Booking link..........................................passed
+Then Page title should be "Bookings - PHPTRAVELS"...........................passed
+And user click on Add_Funds link............................................passed
+Then Page title should be "Add Funds - PHPTRAVELS"..........................passed
+When user click on My Profile link..........................................passed
+Then Page title should be "Profile - PHPTRAVELS"............................passed
+And user click on Logout link...............................................passed
+Then Page title should be "Login - PHPTRAVELS"..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Customer FrontEnd Link Functionality" name="Customer make an automated payment of USD Fifty using Paypal" time="41.114">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And User enters Email as "user@phptravels.com" and password as "demouser"...passed
+And click Login button......................................................passed
+Then Page title should be "Dashboard - PHPTRAVELS"..........................passed
+When user click on Add_Funds link...........................................passed
+Then Page title should be "Add Funds - PHPTRAVELS"..........................passed
+And user can select radio button as pay with paypal.........................passed
+When user click on paynow button for payment................................passed
+Then page for paypal payment url should contain "paypal"....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Customer FrontEnd Link Functionality" name="Customer check Bookings and Display the Voucher" time="35.716">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And User enters Email as "user@phptravels.com" and password as "demouser"...passed
+And click Login button......................................................passed
+Then Page title should be "Dashboard - PHPTRAVELS"..........................passed
+When user click on My Booking link..........................................passed
+Then Page title should be "Bookings - PHPTRAVELS"...........................passed
+And user can check the bookings.............................................passed
+When user can click on view voucher button..................................passed
+Then download button for voucher is Enable..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Customer FrontEnd Link Functionality" name="Customer update the Profile" time="40.536">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And User enters Email as "user@phptravels.com" and password as "demouser"...passed
+And click Login button......................................................passed
+Then Page title should be "Dashboard - PHPTRAVELS"..........................passed
+When user can click on My Profile button....................................passed
+Then navigate to profile page...............................................passed
+And user can edit the Address as "Trivandrum, Kerala, India"................passed
+Then user read the message as Profile updated successfully..................passed
+]]></system-out>
+</testcase>
+<testcase classname="Agent FrontEnd Link Functionality" name="Agent Test SideLink Functionality" time="54.43">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And User enters Email as "agent@phptravels.com" and password as "demoagent".passed
+And click Login button......................................................passed
+Then Page title should be "Dashboard - PHPTRAVELS"..........................passed
+When user click on Agent My booking Link....................................passed
+Then Page title should be "Bookings - PHPTRAVELS"...........................passed
+When user click on Agent Add_funds Link.....................................passed
+Then Page title should be "Add Funds - PHPTRAVELS"..........................passed
+When agent click on My Profile Link.........................................passed
+Then Page title should be "Profile - PHPTRAVELS"............................passed
+And user click on Logout....................................................passed
+Then Page title should be "Login - PHPTRAVELS"..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Agent FrontEnd Link Functionality" name="Agent Test HeaderLink Functionality" time="72.822">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And User enters Email as "agent@phptravels.com" and password as "demoagent".passed
+And click Login button......................................................passed
+Then Page title should be "Dashboard - PHPTRAVELS"..........................passed
+When user click on Hotels Link..............................................passed
+Then Page title should be "Search Hotels - PHPTRAVELS"......................passed
+When user click on Flights Link.............................................passed
+Then Page title should be "Search flights - PHPTRAVELS".....................passed
+And user click on Visa Link.................................................passed
+Then Page title should be "Submit Visa - PHPTRAVELS"........................passed
+When user click on Tours Link...............................................passed
+Then Page title should be "Search Tours - PHPTRAVELS".......................passed
+And user click on Blog Link.................................................passed
+Then Page title should be "Blog - PHPTRAVELS"...............................passed
+And user click on Offers Link...............................................passed
+Then Page title should be "Offers - PHPTRAVELS".............................passed
+When user click on Home Logo................................................passed
+Then Page title should be "PHPTRAVELS | Travel Technology Partner - PHPTRAVELS".passed
+]]></system-out>
+</testcase>
+<testcase classname="Agent FrontEnd Link Functionality" name="Agent Search Hotels by City" time="50.756">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And User enters Email as "agent@phptravels.com" and password as "demoagent".passed
+And click Login button......................................................passed
+Then Page title should be "Dashboard - PHPTRAVELS"..........................passed
+When user click on Hotels Link..............................................passed
+Then Page title should be "Search Hotels - PHPTRAVELS"......................passed
+When user can enter "Sin" on city name field................................passed
+And click on search button..................................................passed
+Then Page title should be "Hotels in sindal - PHPTRAVELS"...................passed
+]]></system-out>
+</testcase>
+<testcase classname="Agent FrontEnd Link Functionality" name="Agent Update USD to INR" time="33.159">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And User enters Email as "agent@phptravels.com" and password as "demoagent".passed
+And click Login button......................................................passed
+Then Page title should be "Dashboard - PHPTRAVELS"..........................passed
+When user click on USD dropdown menu........................................passed
+And user can select INR from dropdowm menu..................................passed
+Then navigate to home page and user can view INR instead of USD.............passed
+]]></system-out>
+</testcase>
+<testcase classname="Admin BackEnd Link Functionality" name="Admin test the Booking link and display the invoice where payment is successful" time="46.817">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/admin"...........................passed
+And admin enters Email as "admin@phptravels.com" and password as "demoadmin".passed
+And admin click Login button................................................passed
+Then Page title should be "Dashboard".......................................passed
+When admin click on Bookings Link...........................................passed
+Then Page title should be "All Bookings View"...............................passed
+And admin click on paid booking link........................................passed
+Then Page title should be "paid Bookings View"..............................passed
+When user click on invoice button...........................................passed
+Then Page title should be "Hotel Invoice - PHPTRAVELS"......................passed
+Then user can check the payment status is paid..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Admin BackEnd Link Functionality" name="Admin Delete Booking where booking status as cancelled" time="38.163">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/admin"...........................passed
+And admin enters Email as "admin@phptravels.com" and password as "demoadmin".passed
+And admin click Login button................................................passed
+Then Page title should be "Dashboard".......................................passed
+When admin click on Cancelled booking Link..................................passed
+Then Page title should be "cancelled Bookings View".........................passed
+When user click on delete button and invoice should be deleted after accepting alert message.passed
+]]></system-out>
+</testcase>
+<testcase classname="Admin BackEnd Link Functionality" name="Admin Change Booking status and verify the count in dashboard" time="41.182">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/admin"...........................passed
+And admin enters Email as "admin@phptravels.com" and password as "demoadmin".passed
+And admin click Login button................................................passed
+Then Page title should be "Dashboard".......................................passed
+When admin click on Pending booking Link on dashboard.......................passed
+Then Page title should be "Pending Bookings View"...........................passed
+And the count before change the status is verified by admin.................passed
+And admin click on booking status pending dropdown and change to confirmed..passed
+Then the count after change the status in dashbord is verified by admin.....passed
+]]></system-out>
+</testcase>
+<testcase classname="Admin BackEnd Link Functionality" name="Admin check Website link functionality" time="38.001">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/admin"...........................passed
+And admin enters Email as "admin@phptravels.com" and password as "demoadmin".passed
+And admin click Login button................................................passed
+Then Page title should be "Dashboard".......................................passed
+When admin click on Website link............................................passed
+Then Page title should be "PHPTRAVELS | Travel Technology Partner - PHPTRAVELS".passed
+]]></system-out>
+</testcase>
+<testcase classname="Supplier BackEnd Link Functionality" name="Supplier verify the dashboard view and check the text" time="23.757">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When supplier open url "https://phptravels.net/api/supplier"................passed
+And supplier enters Email as "supplier@phptravels.com" and password as "demosupplier".passed
+And supplier click Login button.............................................passed
+Then Page title should be "Dashboard".......................................passed
+When supplier enters dashboard and can view Sales Overview and summary text.passed
+Then supplier can verify the summary text on dashboard......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Supplier BackEnd Link Functionality" name="Supplier test the dashboard displays the Revenue breakdown" time="24.845">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When supplier open url "https://phptravels.net/api/supplier"................passed
+And supplier enters Email as "supplier@phptravels.com" and password as "demosupplier".passed
+And supplier click Login button.............................................passed
+Then Page title should be "Dashboard".......................................passed
+When supplier enters dashboard can view Revenue breakdown text..............passed
+Then supplier can verify the revenue text on dashboard......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Supplier BackEnd Link Functionality" name="Supplier Change the booking status and verify the count in Dashboard" time="40.063">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When supplier open url "https://phptravels.net/api/supplier"................passed
+And supplier enters Email as "supplier@phptravels.com" and password as "demosupplier".passed
+And supplier click Login button.............................................passed
+Then Page title should be "Dashboard".......................................passed
+When supplier enters dashboard verify the count before changing the booking status.passed
+And supplier click on pending button on dashboard...........................passed
+Then Page title should be "Pending Bookings View"...........................passed
+And supplier click on booking status pending dropdown and change to confirmed.passed
+Then the count after change the status in dashbord is verified by supplier..passed
+]]></system-out>
+</testcase>
+<testcase classname="Supplier BackEnd Link Functionality" name="Supplier Verify the Functionality of Flight Link" time="20.723">
+<failure type="java.lang.AssertionError" message="Bug">
+<![CDATA[java.lang.AssertionError: Bug
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at stepDefinitions.StepDefinition1.supplier_click_on_flight_link(StepDefinition1.java:511)
+	at ✽.supplier click on flight link(file:///D:/GROUP2/PHP_TRAVELS_DEMO/src/test/resources/Features/4Supplier.feature:26)
+]]>
+</failure>
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When supplier open url "https://phptravels.net/api/supplier"................passed
+And supplier enters Email as "supplier@phptravels.com" and password as "demosupplier".passed
+And supplier click Login button.............................................passed
+Then Page title should be "Dashboard".......................................passed
+When supplier click on flight link..........................................failed
+Then Page title should be "Flight Management"...............................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Supplier BackEnd Link Functionality" name="Supplier Verify the Functionality of Visa Link" time="19.56">
+<failure type="java.lang.AssertionError" message="Bug">
+<![CDATA[java.lang.AssertionError: Bug
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at stepDefinitions.StepDefinition1.supplier_click_on_visa_link(StepDefinition1.java:517)
+	at ✽.supplier click on Visa link(file:///D:/GROUP2/PHP_TRAVELS_DEMO/src/test/resources/Features/4Supplier.feature:30)
+]]>
+</failure>
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When supplier open url "https://phptravels.net/api/supplier"................passed
+And supplier enters Email as "supplier@phptravels.com" and password as "demosupplier".passed
+And supplier click Login button.............................................passed
+Then Page title should be "Dashboard".......................................passed
+When supplier click on Visa link............................................failed
+Then Page title should be "Visa Management".................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Supplier BackEnd Link Functionality" name="Supplier Verify the Functionality of Tours Link" time="33.333">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When supplier open url "https://phptravels.net/api/supplier"................passed
+And supplier enters Email as "supplier@phptravels.com" and password as "demosupplier".passed
+And supplier click Login button.............................................passed
+Then Page title should be "Dashboard".......................................passed
+When supplier click on Tours link...........................................passed
+Then Page title should be "Tours Management"................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Supplier BackEnd Link Functionality" name="Supplier Verify the Functionality of Bookings Link" time="27.542">
+<failure type="org.junit.ComparisonFailure" message="expected:&lt;[All Bookings View]&gt; but was:&lt;[Error]&gt;">
+<![CDATA[org.junit.ComparisonFailure: expected:<[All Bookings View]> but was:<[Error]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinitions.StepDefinition1.page_title_should_be(StepDefinition1.java:65)
+	at ✽.Page title should be "All Bookings View"(file:///D:/GROUP2/PHP_TRAVELS_DEMO/src/test/resources/Features/4Supplier.feature:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When supplier open url "https://phptravels.net/api/supplier"................passed
+And supplier enters Email as "supplier@phptravels.com" and password as "demosupplier".passed
+And supplier click Login button.............................................passed
+Then Page title should be "Dashboard".......................................passed
+When supplier click on Bookings link........................................passed
+Then Page title should be "All Bookings View"...............................failed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Customer Front End Login functionality - Example #1.1" time="25.059">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And users enters Email as "user1@phptravels.com" and password as "demouser".passed
+And click Login button......................................................passed
+Then user Page url should contain "dashboard"...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Customer Front End Login functionality - Example #1.2" time="24.53">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And users enters Email as "user@phptravels.com" and password as "demouser123".passed
+And click Login button......................................................passed
+Then user Page url should contain "dashboard"...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Customer Front End Login functionality - Example #1.3" time="23.997">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And users enters Email as "user@phptravelscom" and password as "demouser123".passed
+And click Login button......................................................passed
+Then user Page url should contain "dashboard"...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Customer Front End Login functionality - Example #1.4" time="23.981">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And users enters Email as "" and password as "demouser".....................passed
+And click Login button......................................................passed
+Then user Page url should contain "dashboard"...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Customer Front End Login functionality - Example #1.5" time="23.94">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And users enters Email as "user@phptravels.com" and password as ""..........passed
+And click Login button......................................................passed
+Then user Page url should contain "dashboard"...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Customer Front End Login functionality - Example #1.6" time="24.016">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And users enters Email as "" and password as "".............................passed
+And click Login button......................................................passed
+Then user Page url should contain "dashboard"...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Customer Front End Login functionality - Example #1.7" time="25.175">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And users enters Email as "user@phptravels.com" and password as "demouser"..passed
+And click Login button......................................................passed
+Then user Page url should contain "dashboard"...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Agent Front End Login functionality - Example #1.1" time="24.32">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And users enters Email as "agent1@phptravels.com" and password as "demoagent".passed
+And click Login button......................................................passed
+Then user Page url should contain "dashboard"...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Agent Front End Login functionality - Example #1.2" time="23.575">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And users enters Email as "agent@phptravels.com" and password as "demoagent123".passed
+And click Login button......................................................passed
+Then user Page url should contain "dashboard"...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Agent Front End Login functionality - Example #1.3" time="24.398">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And users enters Email as "agent@phptravelscom" and password as "demoagent123".passed
+And click Login button......................................................passed
+Then user Page url should contain "dashboard"...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Agent Front End Login functionality - Example #1.4" time="24.383">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And users enters Email as "" and password as "demoagent"....................passed
+And click Login button......................................................passed
+Then user Page url should contain "dashboard"...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Agent Front End Login functionality - Example #1.5" time="28.926">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And users enters Email as "agent@phptravels.com" and password as "".........passed
+And click Login button......................................................passed
+Then user Page url should contain "dashboard"...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Agent Front End Login functionality - Example #1.6" time="23.797">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And users enters Email as "" and password as "".............................passed
+And click Login button......................................................passed
+Then user Page url should contain "dashboard"...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Agent Front End Login functionality - Example #1.7" time="24.279">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user open url "https://phptravels.net/login"...........................passed
+And users enters Email as "agent@phptravels.com" and password as "demoagent".passed
+And click Login button......................................................passed
+Then user Page url should contain "dashboard"...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Admin Back End Login functionality - Example #1.1" time="23.9">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When admin open url "https://phptravels.net/admin"..........................passed
+And admin enters Email as "admin1@phptravels.com" and password as "demoadmin".passed
+And admin click Login button................................................passed
+Then admin Page title should contain "Dashboard"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Admin Back End Login functionality - Example #1.2" time="24.064">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When admin open url "https://phptravels.net/admin"..........................passed
+And admin enters Email as "admin@phptravels.com" and password as "demoadmin123".passed
+And admin click Login button................................................passed
+Then admin Page title should contain "Dashboard"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Admin Back End Login functionality - Example #1.3" time="24.016">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When admin open url "https://phptravels.net/admin"..........................passed
+And admin enters Email as "admin@php.com" and password as "demoadmin123"....passed
+And admin click Login button................................................passed
+Then admin Page title should contain "Dashboard"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Admin Back End Login functionality - Example #1.4" time="23.387">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When admin open url "https://phptravels.net/admin"..........................passed
+And admin enters Email as "" and password as "demoadmin"....................passed
+And admin click Login button................................................passed
+Then admin Page title should contain "Dashboard"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Admin Back End Login functionality - Example #1.5" time="24.199">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When admin open url "https://phptravels.net/admin"..........................passed
+And admin enters Email as "admin@phptravels.com" and password as "".........passed
+And admin click Login button................................................passed
+Then admin Page title should contain "Dashboard"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Admin Back End Login functionality - Example #1.6" time="24.067">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When admin open url "https://phptravels.net/admin"..........................passed
+And admin enters Email as "" and password as "".............................passed
+And admin click Login button................................................passed
+Then admin Page title should contain "Dashboard"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Admin Back End Login functionality - Example #1.7" time="28.032">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When admin open url "https://phptravels.net/admin"..........................passed
+And admin enters Email as "admin@phptravels.com" and password as "demoadmin".passed
+And admin click Login button................................................passed
+Then admin Page title should contain "Dashboard"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Supplier Back End Login functionality - Example #1.1" time="21.399">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When supplier open url "https://phptravels.net/api/supplier"................passed
+And supplier enters Email as "supplier11@phptravels.com" and password as "demosupplier".passed
+And admin click Login button................................................passed
+Then supplier Page title should contain "Dashboard".........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Supplier Back End Login functionality - Example #1.2" time="21.723">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When supplier open url "https://phptravels.net/api/supplier"................passed
+And supplier enters Email as "supplier@phptravels.com" and password as "demosupplier123".passed
+And admin click Login button................................................passed
+Then supplier Page title should contain "Dashboard".........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Supplier Back End Login functionality - Example #1.3" time="22.955">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When supplier open url "https://phptravels.net/api/supplier"................passed
+And supplier enters Email as "supplierphptravels.com" and password as "demosupplier123".passed
+And admin click Login button................................................passed
+Then supplier Page title should contain "Dashboard".........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Supplier Back End Login functionality - Example #1.4" time="21.527">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When supplier open url "https://phptravels.net/api/supplier"................passed
+And supplier enters Email as "" and password as "demosupplier"..............passed
+And admin click Login button................................................passed
+Then supplier Page title should contain "Dashboard".........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Supplier Back End Login functionality - Example #1.5" time="21.73">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When supplier open url "https://phptravels.net/api/supplier"................passed
+And supplier enters Email as "supplier@phptravels.com" and password as ""...passed
+And admin click Login button................................................passed
+Then supplier Page title should contain "Dashboard".........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Supplier Back End Login functionality - Example #1.6" time="21.253">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When supplier open url "https://phptravels.net/api/supplier"................passed
+And supplier enters Email as "" and password as ""..........................passed
+And admin click Login button................................................passed
+Then supplier Page title should contain "Dashboard".........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Supplier Back End Login functionality - Example #1.7" time="21.27">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When supplier open url "https://phptravels.net/api/supplier"................passed
+And supplier enters Email as "supplier@phptravels.com" and password as "demosupplier".passed
+And admin click Login button................................................passed
+Then supplier Page title should contain "Dashboard".........................passed
+]]></system-out>
+</testcase>
+</testsuite>
